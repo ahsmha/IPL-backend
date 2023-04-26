@@ -1,0 +1,28 @@
+1. players
+    - filters:
+        - yearwise 
+        - seasonwise
+    - data:
+        - innings
+        - matches played
+        - runs
+        - average
+        - SR
+        - fours
+        - sixes
+        - centuries
+        - fifties
+2. teams
+    - filters:
+        - yearwise 
+        - seasonwise
+    - data:
+        - innings
+        - matches played
+        - runs
+        - average
+        - SR
+        - fours
+        - sixes
+        - centuries
+        - fifties

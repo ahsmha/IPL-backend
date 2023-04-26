@@ -1,0 +1,6 @@
+__pycache__/
+.DS_Store
+.ipynb_checkpoints
+*.rdb
+venv/
+static/models/ipl_score_predict_model.pkl

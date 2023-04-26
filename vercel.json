@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "iplStats/wsgi.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "iplStats/wsgi.py"
+    }
+  ]
+}
