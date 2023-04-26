@@ -164,7 +164,7 @@ def get_stats(request, filter):
             result = stats.get_most_centuries(season=season, team=team)
         else:
             raise Exception('Bad Request')
-        # print('result >>>>', result)
+            
         response = {
             'statusCode': 200,
             'isSuccess': True,

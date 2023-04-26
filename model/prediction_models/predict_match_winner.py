@@ -18,8 +18,14 @@ def get_match_winner(data):
 
         runs_left = target - current_score
         wickets_left = 10 - wickets
-        current_run_rate = (current_score * 6) / (120 - balls_left)
-        required_run_rate = (runs_left * 6) / balls_left
+        if balls_left != 120:
+            current_run_rate = (current_score * 6) / (120 - balls_left)
+        else:
+            current_run_rate = 0
+        if balls_left:
+            required_run_rate = (runs_left * 6) / balls_left
+        else:
+            required_run_rate = 0
 
         X_data = {
             'BattingTeam': batting_team,
