@@ -46,9 +46,18 @@ def get_match_winner(data):
         X_data = pd.DataFrame(data=X_data, index=[1])
 
         pipe = pickle.load(open(MODEL_FILE_NAME, 'rb'))
-        result = pipe.predict(X_data)
+        # result = pipe.predict(X_data)
+        probability = pipe.predict_proba(X_data)
+        print(probability)
+        result = {
+            bowling_team: int(probability[0][0] * 100),
+            batting_team: int(probability[0][1] * 100)
+        }
 
-        return batting_team if result[0] == 1 else bowling_team
+        print('RESULT >>>>>> ', result)
+
+        # return batting_team if result[0] == 1 else bowling_team
+        return result
     except Exception as ex:
         print('[ERROR][predict_match_winner.py:get_match_winner]: ', ex)
         raise ex
