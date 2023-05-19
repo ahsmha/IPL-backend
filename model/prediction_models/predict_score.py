@@ -14,7 +14,7 @@ def get_score(data):
         runs_in_prev_5 = int(data['runs_in_prev_5'])
         wickets_in_prev_5 = int(data['wickets_in_prev_5'])
         wickets = int(data['wickets'])
-        
+
         X_data = {
             'BattingTeam': batting_team,
             'BowlingTeam': bowling_team,
