@@ -2,8 +2,8 @@ from pathlib import Path
 import os
 from django.core.management.utils import get_random_secret_key
 
-BASE_DIR = Path(__file__).resolve().parent.parent
 
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
 
@@ -12,7 +12,6 @@ DEBUG = os.getenv("DEBUG", "False") == "True"
 ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost,20.244.36.76").split(",")
 
 DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
-
 
 # Application definition
 INSTALLED_APPS = [
@@ -24,6 +23,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Apps
     'model',
+    'stats',
     'rest_framework',
     'corsheaders',
 ]
@@ -59,7 +59,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'iplStats.wsgi.application'
 
-
 # Database
 DATABASES = {
     'default': {
@@ -67,7 +66,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
@@ -85,7 +83,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 LANGUAGE_CODE = 'en-us'
 
@@ -94,7 +91,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = 'static/'
