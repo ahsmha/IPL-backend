@@ -2,4 +2,3 @@ Django==4.2
 djangorestframework==3.14.0
 django-cors-headers==3.14.0
 pandas==2.0.0
-# scikit-learn==1.2.2
